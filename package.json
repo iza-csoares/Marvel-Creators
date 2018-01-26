@@ -1,0 +1,11 @@
+{
+  "scripts": {
+    "serve": "lite-server"
+  },
+  "devDependencies": {
+    "lite-server": "^2.2.0"
+  },
+  "dependencies": {
+    "angular-md5": "^0.1.10"
+  }
+}

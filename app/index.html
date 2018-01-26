@@ -1,0 +1,65 @@
+<!doctype html>
+<html lang="pt-br" ng-app="Creators">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width">
+  <title>Creators</title>
+  <link rel="stylesheet" href="css/style.css">
+  <link rel="stylesheet" href="css/bootstrap.min.css">
+  <link rel="stylesheet" href="css/animate.min.css">
+  <script src="http://code.jquery.com/jquery-3.2.1.min.js"></script>
+  <script src="scripts/Lib/angular.min.js"></script>
+  <script src="scripts/Lib/ui-bootstrap.js"></script>
+  <script src="scripts/Lib/ui-bootstrap-tpls.js"></script>
+  <script src="scripts/app.js"></script>
+  <script src="scripts/creators.controller.js"></script>
+  <script src="scripts/marvel-creators.service.js"></script>
+  <script src="scripts/Lib/md5.min.js"></script>
+</head>
+
+<body>
+
+ <div class="cont" ng-controller="CreatorsController">
+
+
+  <div class="lista-creators">
+    <div class="criador painel" ng-repeat="creator in creators" ng-show="creator.firstName.length !== 0">
+
+     <h1>{{creator.firstName}} {{creator.middleName}} {{creator.lastName}}</h1>
+     <img src="{{creator.thumbnail.path}}.{{creator.thumbnail.extension}}" alt="Creator {{creator.firstName}}" ng-click="abrirModal(creator)" >
+
+       </div>
+     </div>
+   </div>
+
+   <!--Modal-->
+   <script type="text/ng-template" id="modalCreators">
+    <div class="modal-header">
+      <h2 class="modal-title" id="modal-title-{{name}}">Details</h2>
+    </div>
+    <div class="modal-body" id="modal-body-{{name}}">
+      <h4>Series</h4>
+      <div ng-repeat="elemento in item.series.items">
+        <h3>{{elemento.name}}</h3>
+      </div> 
+      <h4>Comics</h4>
+      <div ng-repeat="elemento in item.comics.items">
+        <h3>{{elemento.name}}</h3>
+      </div> 
+      <h4>Events</h4>
+        <div ng-repeat="elemento in item.events.items">
+        <h3>{{elemento.name}}</h3>
+      </div> 
+      <h4>Stories</h4>
+        <div ng-repeat="elemento in item.stories.items">
+        <h3>{{elemento.name}}</h3>
+      </div> 
+    <div class="modal-footer">
+      <button class="btn btn-danger" ng-click="fecharModal()">Close</button>
+    </div>
+  </script>
+
+  <div class="credit"><a href="http://marvel.com" target="_blank">Data provided by Marvel. © 2017 Marvel</a></div>
+
+</body>	    
+</html>

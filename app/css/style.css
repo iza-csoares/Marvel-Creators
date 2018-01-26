@@ -1,0 +1,119 @@
+
+@font-face{
+   font-family:'FonteNomes';
+   src: url("../fonts/bebasneue-bold.ttf");
+}
+
+* {
+	box-sizing: border-box;
+}
+
+body {
+	background-image:url(img/marvel.gif);
+	-webkit-background-size: cover  !important;
+    -moz-background-size: cover  !important;
+    -o-background-size: cover  !important;
+    background-size: cover  !important;
+}
+
+h1 {
+	font-family: "FonteNomes", sans-serif !important;
+	font-size: 1.5em !important;
+	color:red !important;
+}
+
+h2 {
+	font-size: 1.5em !important;
+	color:red !important;
+}
+
+h3 {
+	font-size: 1em !important;
+	color:black !important;
+}
+
+h4 {
+	font-size: 1.2em !important;
+	color:red !important;
+}
+
+.modal-open{
+    overflow-y: scroll!important;	
+}
+
+.cont {
+	width: 1500px;
+	margin-left: 100px;
+	max-width: 90vw;
+	margin: 200px auto 0 auto;
+}
+
+.lista-creators .criador {
+	position: relative;
+	display: block;
+	background-color: rgba(255,255,255,0.7);
+	border-radius: 10px;
+	margin-bottom: 30px;
+	margin-top: 50px;
+	padding: 20px;
+	box-shadow: 5px 5px 8px #606060;
+	border-style: 
+	width:800px;
+}
+
+.lista-creators {
+	margin-top: 300px;
+}
+
+.lista-creators .criador.painel {
+	overflow: hidden;
+	padding-left: 200px;
+	height: 200px;
+	width:150px !important;
+	margin:20px;
+	margin-left: 55px;
+	display: inline-block;            /*cada div é posicionada lado a lado mantendo o contexto do fundo*/
+}
+
+.lista-creators .criador img {
+	position: absolute;
+	width: 180px;
+	max-height: 260px;
+	top: 50%;
+	left: 19px;
+	transform: translateY(-50%);
+}
+
+.lista-creators .criador h1 {
+	margin: 0;
+	font-size: 1.25em;
+	margin: -19px -179px;
+}
+
+.lista-creators .criador ul {
+	padding: 0;
+	list-style-position: inside;
+}
+
+.lista-creators .criador p {
+	margin: 0;
+}
+
+.credit { 
+	font-family: "FonteNomes", sans-serif;
+	position: fixed;
+	bottom: 0px;
+	right: 0px;
+	z-index: 1000;
+	padding: 5px;
+	background-color: rgba(255,255,255,0.5);
+}
+
+.credit a{
+   text-decoration: none;
+   color:red;
+}
+
+
+
+
